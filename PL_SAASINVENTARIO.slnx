@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BLL_SAASINVENTARIO/BLL_SAASINVENTARIO.csproj" />
+  <Project Path="DAL_SAASINVENTARIO/DAL_SAASINVENTARIO.csproj" />
+  <Project Path="PL_SAASINVENTARIO/PL_SAASINVENTARIO.csproj" />
+</Solution>
