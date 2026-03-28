@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PL_SAASINVENTARIO</RootNamespace>
     <AssemblyName>PL_SAASINVENTARIO</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44384</IISExpressSSLPort>
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,12 +49,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -121,6 +119,25 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Inventrix\frmInventrix.aspx" />
+    <Content Include="JavaScript\InicioSesion.js" />
+    <Content Include="JavaScript\jquery.cookie.js" />
+    <Content Include="Login\css\font-awesome.min.css" />
+    <Content Include="Login\css\style.css" />
+    <Content Include="Login\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login\frmInicioSesion.aspx" />
+    <Content Include="Login\images\ASTRONAUT.png" />
+    <Content Include="Login\images\ASTRONAUT2.jpg" />
+    <Content Include="Login\images\freelan.mp4" />
+    <Content Include="Login\images\LogoUAM.png" />
+    <Content Include="Login\images\LogoUAM_W.png" />
+    <Content Include="Login\images\Logo_SpaceOps.png" />
+    <Content Include="Login\images\SPACEOPS.png" />
+    <Content Include="Login\images\SPACEOPS_2.png" />
+    <Content Include="Login\index.html" />
+    <Content Include="Login\jquery.cookie.js" />
+    <Content Include="Login\js\jquery.min.js" />
+    <Content Include="Login\js\jquery.vide.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -149,6 +166,12 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Login\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login\fonts\FontAwesome.otf" />
+    <Content Include="Login\images\SpaceOps.psd" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -209,6 +232,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Inventrix\frmInventrix.aspx.cs">
+      <DependentUpon>frmInventrix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventrix\frmInventrix.aspx.designer.cs">
+      <DependentUpon>frmInventrix.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmInicioSesion.aspx.cs">
+      <DependentUpon>frmInicioSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\frmInicioSesion.aspx.designer.cs">
+      <DependentUpon>frmInicioSesion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -219,12 +256,14 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -243,6 +282,19 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL_SAASINVENTARIO\BLL_SAASINVENTARIO.csproj">
+      <Project>{72aace46-92ae-4e9e-9213-a081ac58cc68}</Project>
+      <Name>BLL_SAASINVENTARIO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL_SAASINVENTARIO\DAL_SAASINVENTARIO.csproj">
+      <Project>{9769262f-cdae-4667-94e3-3dd51c8e948f}</Project>
+      <Name>DAL_SAASINVENTARIO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
