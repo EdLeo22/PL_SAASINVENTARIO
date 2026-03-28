@@ -43,13 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="BD\cls_BD_BLL.cs" />
     <Compile Include="Inventix\cls_Usuarios_BLL.cs" />
-=======
     <Compile Include="cls_BD_BLL.cs" />
     <Compile Include="cls_Productos_BLL.cs" />
->>>>>>> 764fc57ee8a98e4011aa578e36e0f3abdeba761c
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBLL.cs" />
   </ItemGroup>

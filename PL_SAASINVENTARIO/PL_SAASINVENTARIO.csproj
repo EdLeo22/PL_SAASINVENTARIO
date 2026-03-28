@@ -116,7 +116,6 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-<<<<<<< HEAD
     <Content Include="Inventrix\frmInventrix.aspx" />
     <Content Include="JavaScript\InicioSesion.js" />
     <Content Include="JavaScript\jquery.cookie.js" />
@@ -136,9 +135,7 @@
     <Content Include="Login\jquery.cookie.js" />
     <Content Include="Login\js\jquery.min.js" />
     <Content Include="Login\js\jquery.vide.js" />
-=======
     <Content Include="Register.aspx" />
->>>>>>> 764fc57ee8a98e4011aa578e36e0f3abdeba761c
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
