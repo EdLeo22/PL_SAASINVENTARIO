@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BLL_SAASINVENTARIO/BLL_SAASINVENTARIO.csproj" Id="72aace46-92ae-4e9e-9213-a081ac58cc68" />
+  <Project Path="DAL_SAASINVENTARIO/DAL_SAASINVENTARIO.csproj" Id="9769262f-cdae-4667-94e3-3dd51c8e948f" />
+  <Project Path="PL_SAASINVENTARIO/PL_SAASINVENTARIO.csproj" Id="047b0c04-198a-4e23-92a3-02c3782c1fcd" />
+</Solution>
